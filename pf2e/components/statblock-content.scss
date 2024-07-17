@@ -32,6 +32,17 @@ $statblock-content-margin: 0.5em 2px;
 					font-style: normal;
 				}
 
+				// Show only the modifier for ability mods, not the raw value
+				.statblock-table.abilitymods {
+					.statblock-markdown {
+						display: none;
+					}
+					.calculated-modifier::before,
+					.calculated-modifier::after {
+						content: "";
+					}
+				}
+
 				// Style .oneline containers to show all props inline separated by semicolons.
 				.inline-container.oneline {
 					display: block;
