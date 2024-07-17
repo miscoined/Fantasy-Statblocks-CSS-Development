@@ -37,7 +37,20 @@
 		margin-right: 0;
 	}
 
-	.ac-saves .save-name {
-		font-weight: var(--statblock-property-name-font-weight);
+	.saves-container {
+		// Bold saving throw names
+		.saves.line .save-name {
+			font-weight: var(--statblock-property-name-font-weight);
+		}
+
+		// Hide the label for notes
+		.save-entry.save-note-entry .save-name {
+			display: none;
+		}
+
+		// Use a semicolon between the stat values and the notes
+		.save-entry:has(+ .save-entry.save-note-entry) .save-value::after {
+			content: "; ";
+		}
 	}
 }
