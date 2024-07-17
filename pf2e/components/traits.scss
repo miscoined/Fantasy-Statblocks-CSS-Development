@@ -97,7 +97,7 @@ $statblock-trait-font-style: normal;
 
 				margin: 0;
 
-				> .line.traits {
+				> .line:has(.property-name) {
 					margin: 0;
 					display: block;
 
