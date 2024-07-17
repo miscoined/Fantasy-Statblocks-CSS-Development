@@ -32,6 +32,12 @@
 	}
 }
 
-.statblock.pathfinder-2e-creature-layout .property-name {
-	margin-right: 0;
+.statblock.pathfinder-2e-creature-layout {
+	.property-name {
+		margin-right: 0;
+	}
+
+	.ac-saves .save-name {
+		font-weight: var(--statblock-property-name-font-weight);
+	}
 }
