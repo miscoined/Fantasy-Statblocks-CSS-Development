@@ -38,6 +38,11 @@
 	}
 
 	.saves-container {
+		// Capitalized skill names
+		.skills.line .save-name {
+			text-transform: capitalize;
+		}
+
 		// Bold saving throw names
 		.saves.line .save-name {
 			font-weight: var(--statblock-property-name-font-weight);
