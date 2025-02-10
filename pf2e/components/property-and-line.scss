@@ -33,19 +33,18 @@
 }
 
 .statblock.pathfinder-2e-creature-layout {
-	.property-name {
+	// Extra specification for :empty here to win selector war over the Svelte component styles
+	.property-name, .property-name:empty {
 		margin-right: 0;
 	}
 
 	.saves-container {
-		// Capitalized skill names
-		.skills.line .save-name {
-			text-transform: capitalize;
-		}
-
-		// Bold saving throw names
-		.saves.line .save-name {
-			font-weight: var(--statblock-property-name-font-weight);
+		// Capitalize and bold skill and attribute names
+		.saves.line, .attributes.line {
+			.save-name {
+				text-transform: capitalize;
+				font-weight: var(--statblock-property-name-font-weight);
+			}
 		}
 
 		// Hide the label for notes
